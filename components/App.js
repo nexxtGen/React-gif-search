@@ -38,17 +38,7 @@ App = React.createClass({
                     sourceUrl: data.url
                 };
                 callback(gif);  // 6. Przekazujemy obiekt do funkcji callback, którą przekazaliśmy jako drugi parametr metody getGif.
-            } /* else {// dopisać kod jeśli wystapi błąd serwera
-                var gif = {
-                    url: './404.png',
-                    sourceUrl: './404.png'
-                };
-                this.setState({  // 4 Na zakończenie pobierania:
-                    loading: false,  // a przestań sygnalizować ładowanie,
-                    gif: gif,  // b ustaw nowego gifa z wyniku pobierania,                    
-                });
-                callback(gif);                
-            };  */
+            }
                
         };        
         xhr.onerror = () => {
@@ -56,12 +46,7 @@ App = React.createClass({
                 url: './404.png',
                 sourceUrl: './404.png'
             };
-            /*
-            this.setState({  // 4 Na zakończenie pobierania:
-                loading: false,  // a przestań sygnalizować ładowanie,
-                gif: gif,  // b ustaw nowego gifa z wyniku pobierania,                    
-            });
-            */
+                       
             callback(gif);
         }
         xhr.send();
