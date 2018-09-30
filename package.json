@@ -49,6 +49,7 @@
     "sass": "^1.11.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "glob-run": "^0.1.6",
     "postcss-cli-simple": "^1.0.4"
   }
